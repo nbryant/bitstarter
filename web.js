@@ -8,7 +8,7 @@ app.use(express.logger());
 var message = fs.readFileSync("index.html").toString("utf-8");
 
 app.get('/', function(request, response) {
-  response.send("test");
+  response.send(message);
 });
 
 var port = process.env.PORT || 5000;
